@@ -29,6 +29,12 @@ code is not well documented. Read the documentation-related links provided on
 the course schedule (for class #1) to understand what is expected.
 Be sure to consult the rubric for details on grading.
 
+# Deliverables
+There are two parts to deliver, all zipped into one file for upload:
+- a PDF containing relevant screeenshots of each part followed by code snippets (which is relative: how much to include is up to you for each part) that produced the result shown in the screenshot.
+- your code, with each of the three tasks zipped together.
+See the end for more detail, but read the project task descriptions first so that you know what the details are talking about.
+
 # Task 1
 # Use the IntelliJ Project Name:  Project1Task1
 
@@ -75,7 +81,7 @@ The prediction is based on a regression analysis of the 1992 Olympics. The model
 
 S = 0.1*(P*G^2)^(1/3)
 
-where S is the weighted sum of the medals 3*gold + 2*silver + 1*bronze, P is the population in millions (so divide by 1000000), G is the GDP in billions (divide by 1000000000), and ^ means pow(), so G is squared and then take the cube root of the product (use Math.pow( ) for that part).
+where S is the weighted sum of the medals 3xgold + 2xsilver + 1xbronze, P is the population in millions (so divide by 1000000), G is the GDP in billions (divide by 1000000000), and ^ means pow(), so G is squared and then take the cube root of the product (use Math.pow( ) for that part).
 
 Because GDP, population, and the overall number of medals offered may no longer fit that analysis, the model is not accurate - I've changed the constant from 0.215 to 0.1 to try to adjust, but that's just guessing.
 
@@ -98,11 +104,13 @@ Only the top 20 countries by GDP will be used. Figure 1 show the initial input s
 ![Figure 1](figure1.png)
 ***Figure 1***
 
+---
+
 ![Figure 2](figure2.png)
 ***Figure 2***
 
 ## Output
-Figure 3 shows the output screen. It contains the country's name, the population and GDP (with the credit line for worldometers); the number of gold, silver, and bronze medals won (with the credit line for the Olympics site); the weighted sum of the medals (3*gold + 2*silver + bronze); the estimate of that weighted sum - the expected medal count (with the credit line for the book); and finally the waving-flag gif (with the credit line for the flag site). The flag is an animated gif.
+Figure 3 shows the output screen, where the user has chosen Australia. It contains the country's name, the population and GDP (with the credit line for worldometers); the number of gold, silver, and bronze medals won (with the credit line for the Olympics site); the weighted sum of the medals (3xgold + 2xsilver + 1xbronze); the estimate of that weighted sum - the expected medal count (with the credit line for the book); and finally the waving-flag gif (with the credit line for the flag site). The flag is an animated gif.
 
 ![Figure 3](figure3.png)
 ***Figure 3***
@@ -224,16 +232,8 @@ Track Piazza for additional hints and answers to questions.
 
 ## Deliverables
 
-In addition to your project code, produce screen shots showing three different
-countries and years.  Alternatively, you can create a screencast video of
-your working web app, again demonstrating all of the above requirements.
-
-- The video cannot be more than 3 minutes long
-- You may use an audio voiceover, but you do not need to
-- You should publish the video as 'Unlisted' to YouTube. (See more discussion on
-  this in the Submission section below.)
-- Include the URL of the YouTube video in a document in the Project1Task2
-  Description folder that you submit.
+In addition to your project code, produce screen shots showing two different
+countries and years.
 
 # Alternative Task 2b
 
@@ -269,6 +269,7 @@ create a document that includes:
 2.	Screen shot of your web application gracefully failing (to test, turn off
 your wifi so that the HTTP request to source of your data fails).
 3.	A description of how the web application meets requirements 1-4 above.
+
 Alternatively you can create a screencast video of your working web app.
 - The video cannot be more than 3 minutes long
 - An audio voiceover should explain what your application does and how it meets requirements 1-4 above.
@@ -277,7 +278,7 @@ Alternatively you can create a screencast video of your working web app.
 - Include the URL of the YouTube video in a document in the Project1Task2
   Description folder that you submit.
 
-# Task 3a – Default task (You may do this regardless of whether you did Task 2a or 2b) Use the IntelliJ Project Name: Project1Task3
+# Task 3 – Use the IntelliJ Project Name: Project1Task3
 
 Implement a web application that implements a simple desktop and mobile
 “clicker” for class.  Your app should allow users to submit answers to questions
@@ -322,9 +323,6 @@ Note that requirement 4 does not adhere to the HTTP standard for a GET request.
 You should understand why this is bad behavior according to the standard, and
 how you could fix it (It might be on the exam).
 
-![Figure 8](figure8.png)
-***Figure 8***
-
 The web app should work with a mobile browser.  For this project you can use a simple
 check like the one that was used in InterestingPicture and then use an appropriate mobile doctype.
 An easy way to check your web app for mobile is to use the Google Chrome DevTools
@@ -363,92 +361,38 @@ Produce screen shots of your application:
 - With the answer options on mobile
 - With the getResults on mobile
 
-Alternatively you can create a screencast video of your working web app.
-- The video cannot be more than 3 minutes long
-- You may use an audio voiceover, but you do not need to
-- You should publish the video as 'Unlisted' to YouTube.  (See more discussion
-  on this in the Submission section below.)
-- Include the URL of the YouTube video in a document in the Project1Task3
-  Description folder that you submit.
-
-# Alternative Task 3b (You may do this regardless of whether you did Task 2a or 2b)
-
-Implement all requirements of Task 3a, but instead of asking “Submit your answer
-to the current question” and providing alternatives “A, B, C, and D”, give the
-user alternatives from the information you have screen scraped and ask them to
-vote for one.  For example, if you implemented Task 2a, then Task 3b could give
-several images from the National Zoo matching a search string and allow the user
-to vote for their favorite.
-
-If you did Task 2b screen scraping statistics of badminton players from a given
-country, then you could have the user choose their favorite badminton player.
-All other requirements for Task 3 apply.
-
-Because your web app will work differently than the default task, it is in your
-best interest to explain to the grading TA exactly how it works. Therefore,
-create a document that includes:
-1.	Screen shots of your working web application.
-2.	A description of how the user should use it (e.g. what would be valid input).
-
-Alternatively you can create a screencast video of your working web app.
-- The video cannot be more than 3 minutes long
-- An audio voiceover should explain what your application does and how to use it.
-- You should publish the video as 'Unlisted' to YouTube.  (See more discussion
-  on this in the Submission section below.)
-- Include the URL of the YouTube video in a document in the Project1Task3
-  Description folder that you submit.
-
 ## Questions:
 If you have questions, you can post them to the class Piazza and tag them as “Project1”.
 
-## Summary & Submission:
+# Summary & Submission:
 Be sure to review the Rubric linked on the course schedule for the first day.
 
-**Video sharing rights:** If you are creating screencast videos, then you should set
+Submit a PDF containing the following:
+
+### Task 1:
+1. Screen shots of input, MD5 and SHA-256 output, both in hex and base 64
+2. Code snippet of computation of each hash
+
+### Task 2a:
+1. Screen shot of input page, drop-down menu, output page for United States and Great Britain.
+2. Code snippets for:
+- scraping of population and gdp
+- scraping of medals
+- scraping of flag
+
+### Task 2b:
+Screen shots and code snippets are up to you.
+
+### Task 3:
+1. Screen shots of input page, output page (one vote), results page
+2. Code snippet from the Java code that produces the output page and the results page.
+
+**Video sharing rights:** If you are creating screencast videos for 2b, then you should set
 the YouTube sharing rights 'Unlisted' when publishing to YouTube. There are
 three types of sharing rights on YouTube: Public, Private and Unlisted. You do
 not want other students to be able to see your video (that would be cheating),
 and ‘Unlisted’ restricts viewing to only those who have your URL.
 
-Be sure you have named your IntelliJ project folders correctly.
-For each IntelliJ project, File->Export Project->To Zip… each. **You must export
-in this way and NOT just zip the IntelliJ project folders.**
+Fore each project, use FileExplorer or Finder, navigate to your project directory, and zip ***only*** the .java and .jsp files together. The zip those together with the PDF file of screenshots and code snippets.
 
-You should also have three description folders:
-- Project1Task1 Description
-- Project1Task2 Description
-- Project1Task3 Description
-The description folders contain the mandatory screenshots and the optional
-descriptions if you chose to customize the task2 and task3. An optional
-description can either be a single document or a link to the video showing your
-work. (If you upload your video to YouTube, make sure your video is selected as
-‘unlisted’.)
-
-Now you should have for .zip files and three description folders:
-
-![Mac OS](figure10.png)
-***Mac OS***
-
-Create a new empty folder named with your Andrew id (very important). Put all
-files mentioned above in to the new folder you created.
-
-![Windows 10](figure11.png)
-***Windows 10***
-
-![Mac OS](figure12.png)
-***Mac OS***
-
-Zip that folder, and submit it to Canvas. The submission should be a single zip file.
-Now you should have only one .zip file named with your Andrew id:
-
-Submission File Structure:
-YourAndrewID.zip
---- Project1Task1.zip
---- Project1Task2.zip
---- Project1Task3.zip
---- Project1Task1 Description
---- Project1Task2 Description
---- Project1Task3 Description
-
-![Zip](figure13.png)
-***Zip***
+**You must export in this way and NOT just zip the IntelliJ project folders.**
