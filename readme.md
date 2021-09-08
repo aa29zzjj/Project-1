@@ -12,7 +12,7 @@ experience.
 **Second**, you build your first set of distributed systems. These are two small
 web applications using Servlets and Java Server Pages.
 
-**Third**, you are introduced to simple JSON processing and web scraping.
+**Third**, you are introduced to web scraping.
 
 **Fourth**, you are introduced to the MVC pattern if you have not used it before.
 
