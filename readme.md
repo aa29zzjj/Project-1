@@ -31,8 +31,9 @@ Be sure to consult the rubric for details on grading.
 
 # Deliverables
 There are two parts to deliver, all zipped into one file for upload:
-- a PDF containing relevant screeenshots of each part followed by code snippets (which is relative: how much to include is up to you for each part) that produced the result shown in the screenshot.
+- one PDF containing relevant screeenshots of each part followed by code snippets (which is relative: how much to include is up to you for each part) that produced the result shown in the screenshot. Each section of the PDF must be clearly labeled.
 - your code, with each of the three tasks zipped together.
+
 See the end for more detail, but read the project task descriptions first so that you know what the details are talking about.
 
 # Task 1
@@ -264,19 +265,12 @@ has an API, but you are not allowed to use the API to return structured data.
 For this assignment you must fetch HTML and process it (i.e. screen scrape).
 Because your web app will work differently than the default one, it is in your
 best interest to explain to the grading TA exactly how it works.  Therefore,
-create a document that includes:
-1.	Screen shots of your working web application
-2.	Screen shot of your web application gracefully failing (to test, turn off
-your wifi so that the HTTP request to source of your data fails).
-3.	A description of how the web application meets requirements 1-4 above.
+create a section in the PDF that describes;
 
-Alternatively you can create a screencast video of your working web app.
-- The video cannot be more than 3 minutes long
-- An audio voiceover should explain what your application does and how it meets requirements 1-4 above.
-- You should publish the video as 'Unlisted' to YouTube.  (See more discussion
-  on this in the Submission section below.)
-- Include the URL of the YouTube video in a document in the Project1Task2
-  Description folder that you submit.
+ - Screen shots of your working web application
+ - Screen shot of your web application gracefully failing (to test, turn off
+your wifi so that the HTTP request to source of your data fails).
+ - A description of how the web application meets requirements 1-4 above.
 
 # Task 3 – Use the IntelliJ Project Name: Project1Task3
 
@@ -367,32 +361,28 @@ If you have questions, you can post them to the class Piazza and tag them as “
 # Summary & Submission:
 Be sure to review the Rubric linked on the course schedule for the first day.
 
-Submit a PDF containing the following:
+Submit ***one*** PDF containing the following; each part should being with the headers shown (that is, "Task 1") and subheaders for the subparts. "Code snippet" means a copy of the relevant code, **not** all of the .java or .jsp file.
 
 ### Task 1:
-1. Screen shots of input, MD5 and SHA-256 output, both in hex and base 64
-2. Code snippet of computation of each hash
+1. **Screen shots** of input, MD5 and SHA-256 output, both in hex and base 64
+2. **Code snippets** of computation of each hash
 
 ### Task 2a:
-1. Screen shot of input page, drop-down menu, output page for United States and Great Britain.
-2. Code snippets for:
+1. **Screen shots** of input page, drop-down menu, output page for United States and Great Britain.
+2. **Code snippets** for:
 - scraping of population and gdp
 - scraping of medals
 - scraping of flag
 
 ### Task 2b:
-Screen shots and code snippets are up to you.
+**Screen shots** and **code snippets**: see the guidelines above for Task 2b.
 
 ### Task 3:
-1. Screen shots of input page, output page (one vote), results page
-2. Code snippet from the Java code that produces the output page and the results page.
+1. **Screen shots** of the input page, output page (one vote), results page
+2. **Code snippets** from the Java code that produces the output page and the results page.
 
-**Video sharing rights:** If you are creating screencast videos for 2b, then you should set
-the YouTube sharing rights 'Unlisted' when publishing to YouTube. There are
-three types of sharing rights on YouTube: Public, Private and Unlisted. You do
-not want other students to be able to see your video (that would be cheating),
-and ‘Unlisted’ restricts viewing to only those who have your URL.
+For each project, use FileExplorer or Finder, navigate to your project directory, and zip ***only*** the .java and .jsp files together.
 
-Fore each project, use FileExplorer or Finder, navigate to your project directory, and zip ***only*** the .java and .jsp files together. The zip those together with the PDF file of screenshots and code snippets.
+**Zzip those together with the single PDF file of screenshots and code snippets.**
 
 **You must export in this way and NOT just zip the IntelliJ project folders.**
