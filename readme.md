@@ -234,7 +234,7 @@ Track Piazza for additional hints and answers to questions.
 ## Deliverables
 
 In addition to your project code, produce screen shots showing two different
-countries and years.
+countries.
 
 # Alternative Task 2b
 
