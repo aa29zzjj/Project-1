@@ -31,8 +31,8 @@ Be sure to consult the rubric for details on grading.
 
 # Deliverables
 There are two parts to deliver, all zipped into one file for upload:
-- one PDF containing relevant screeenshots of each part followed by code snippets (which is relative: how much to include is up to you for each part) that produced the result shown in the screenshot. Each section of the PDF must be clearly labeled.
-- your code, with each of the three tasks zipped together.
+- one PDF containing relevant screeenshots of all the parts followed by code snippets (which is relative: how much to include is up to you for each part) that produced the result shown in the screenshot. Each section of the PDF must be clearly labeled.
+- your projects, each zipped, with all of the three tasks zipped together.
 
 See the end for more detail, but read the project task descriptions first so that you know what the details are talking about.
 
@@ -234,7 +234,7 @@ Track Piazza for additional hints and answers to questions.
 ## Deliverables
 
 In addition to your project code, produce screen shots showing two different
-countries.
+countries and years.
 
 # Alternative Task 2b
 
@@ -381,8 +381,14 @@ Submit ***one*** PDF containing the following; each part should being with the h
 1. **Screen shots** of the input page, output page (one vote), results page
 2. **Code snippets** from the Java code that produces the output page and the results page.
 
-For each project, use FileExplorer or Finder, navigate to your project directory, and zip ***only*** the .java and .jsp files together.
+**New directions for the code:**
+Create three zip files, each one of which is the zip of your WHOLE project for task 1, 2 and 3. For each project, zip the whole project, you need to use "File->Export Project->To Zip" in IDEA.
 
-**Zzip those together with the single PDF file of screenshots and code snippets.**
+Zip the one PDF and the three project zip files into one big zip file for submission.
 
-**You must export in this way and NOT just zip the IntelliJ project folders.**
+~~For each project, use FileExplorer or Finder, navigate to your project directory, and zip ***only*** the .java and .jsp files together.~~
+
+
+~~**Zip those together with the single PDF file of screenshots and code snippets.**~~
+
+~~**You must export in this way and NOT just zip the IntelliJ project folders.**~~
