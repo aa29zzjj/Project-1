@@ -14,7 +14,9 @@ This project has five objectives:
 
 **Fourth**, you are introduced to the MVC pattern if you have not used it before.
 
-And **fifth**, as in all projects this semester, you should reflect on the functional and non-functional characteristics (e.g. security, scalability, failure handling, interoperability) of your solutions. There will be questions on the final exam concerning these characteristics. You should be able to demonstrate a nuanced comprehension of course content and be able to explain the technical aspects in relation to potential real-world applications. For each project task, software documentation is required. The software that you write (Java files and so on) must contain comments that describe what each significant piece of code is intended to accomplish. Points will be deducted if code is not well documented. Read the documentation-related links provided on the course schedule (for class #1) to understand what is expected. Be sure to consult the rubric for details on grading.
+**Fifth**, as in all projects this semester, you should reflect on the functional and non-functional characteristics (e.g. security, scalability, failure handling, interoperability) of your solutions. There will be questions on the final exam concerning these characteristics. You should be able to demonstrate a nuanced comprehension of course content and be able to explain the technical aspects in relation to potential real-world applications. For each project task, software documentation is required. The software that you write (Java files and so on) must contain comments that describe what each significant piece of code is intended to accomplish. Points will be deducted if code is not well documented. Read the documentation-related links provided on the course schedule (for class #1) to understand what is expected. Be sure to consult the rubric for details on grading.
+
+and **sixth**, **optionally** you may use ChatGPT and Copilot to create some of your code. Task 1 and Task 2 **must** be done on your own. There will be exam questions that ask specifically about the code in these two tasks. While you are allowed to use AI tools to help with Task 3, it is totally optional. There will be questions about this code, too, but these questions will be more generic (since different students may code Task 3 using different techniques). So pay attention to the more general issues in Task 3 (like, what is MVC and what are the benefits of using it?).
 
 # Deliverables
 There are two parts to deliver, all zipped into one file for upload, with the name Project1_andrewID.zip, where "andrewID" is replaced with your actual andrew id:
@@ -47,66 +49,104 @@ Because Task 1 is fairly simple, you do not have to use MVC for it. Do the simpl
 
 Be sure to create screen shots of your working application and submit them as described in the Submission section at the end of this document.
 
-# Task 2
-## Use IntelliJ Project Name: Project1Task2
+# Task 2 Use the IntelliJ Project Name: Project1Task2
 
-Task 2 is meant to give you practice with several things: servlet programming, web scraping, API's, JSON, and MVC. It gives some information about the upcoming Women's World Cup in Australia and New Zealand.
+Create a web application that implements a simple desktop and mobile “clicker” for class.  Your app should allow users to submit answers to questions posed in class, and should provide a separate URL end point for getting the results of the submitted responses.  The welcome page for your app should be similar to Figure 1.  You can make it more stylish if you like, but it is not required.
 
-Your program will present a welcome screen containing a title, your name, and a drop-down menu of of countries, as in Figure 1 and Figure 2. Note that there are still a few participants to be decided through playoff games; we will ignore those countries. The Submit button is used to record the user's choice. Note that you will need to learn about HTML drop-down menus on your own.
-
-## Input
 ![Figure 1](figure1.png)
-***Figure 1: Welcome Screen***
+***Figure 1***
 
----
+When the user makes a choice and hits “submit”, their answer should be stored in your MVC model.  The response should be similar to The first line of Figure 2. Notice that it is **required** to provide feedback to the user regarding the choice that they made (i.e. “D” in this example).
+
+The user should also have the ability to submit another answer as shown in the screenshot.
 
 ![Figure 2](figure2.png)
-***Figure 2: Drop-down Menu (partial)***
+***Figure 2***
 
-Use the file "countries" to create the drop-down list. It is okay to hard-code the country names in the jsp file.
-
-## Output
-Figure 3 shows the output screen. Several facts have been gathered from the web sites listed.
+You can test the application by repeatedly submitting answers and allowing your model to tally the results.  Your web app should also have a URL path “/getResults” (shown in Figure 3) for listing the results of user voting.
 
 ![Figure 3](figure3.png)
-***Figure 3: Output for Argentina***
+***Figure 3***
 
-Argentina's nickname is shown first, followed by its capital city. Argentina did not have any player in the top 50 scorers in the 2019 tournament, so "N/A" is shown. The flag is the official country flag, but the flag emoji is an idealized version. The credit for each part of the output is shown - ***but note*** that you will have to construct the URL appropriate to each site (e.g. perhaps by adding the country name).
+## Requirements for the /getResults path:
 
-The Continue button should send the user back to the Welcome screen.
-
-Figure 4 shows the results for the United States.
+1. List each answer that has been given, and the number of times a user has submitted that answer.
+2. You do not have to list options that have been chosen zero times.
+3. The results should be displayed sorted in alphabetical order.
+4. /getResults should also clear the stored results so that a new question can be posed.
+5. If there are no results available, then report this as shown in Figure 4.
 
 ![Figure 4](figure4.png)
-***Figure 4: Output for the United States***
+***Figure 4***
 
-The U.S. team does not have a nickname (according to this web site), so "Not found" is shown. The top scorer in the 2019 tournament for the U.S. was Alex Morgan, with 6 goals (there are other U.S players in the top 50; choose only the highest).
+Note that requirement 4 does not adhere to the HTTP standard for a GET request. You should understand why this is bad behavior according to the standard, and how you could fix it (It might be on the exam).
 
-A few notes:
+The web app should work with a mobile browser.  For this project you can use a simple check like the one that was used in InterestingPicture and then use an appropriate mobile doctype. An easy way to check your web app for mobile is to use the Google Chrome DevTools Using the Google Chrome browser.
 
-1. Do not complain if the name of a country in "countries" is not exactly correct (e.g. "Republic of Robonia" instead of "Robonia", I'm just making that country up).
+- Browse to your web application in Chrome
+- Access the Chrome DevTools
+(https://developers.google.com/web/tools/chrome-devtools/?hl=en#access-devtools).  
+- Toggle device mode to mobile and choose an Android or iPhone device
+(https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/?hl=en)
+- Reload the page.
+- In addition to testing, you use this to produce a screen shot showing your web app working for mobile.  If your page looks like the one Figure 4, even after reloading, then the doctype is not being set correctly.   
 
-2. The nickname site seems a little sketchy; I'm not sure those are all correct - *BUT:* if there is no nickname for some team, display "Not found". For example - as shown in Figure 4 - the United States does not have a nickname.
+Figure 5 is what the web app should look like for mobile if the doctype is set correctly.
 
-3. The capital city site may have duplicates of country names, because some of its listings are territories of other countries or use the same currency - so be careful while scraping this site. For example, the capital of Ireland is Dublin, not London, as my first attempt claimed.
+![Figure 5](figure5.png)
+***Figure 5***
 
-4. You are responsible for correctly handling any outliers on all the sites we're using. For example, "England" is not a country, but show Great Britain's capital. The flag of England should be the United Kingdom's flag, but the emoji should be England's. The flag site uses a dash for any space in the name, as in "Costa-Rica", so make that adjustment.
+## Overall web app requirements:
+- You must use MVC to separate concerns.
+- Implement only one HttpServlet
 
-5. When scraping the top scorer's list, beware that there's a second table on that page showing assists - don't include those players. Only choose a country's top scorer. If the country does not have a player in this list, display "N/A" (that is, not applicable).
+## Hints:
+- You can have multiple URL patterns in a WebServlet annotation.  For example, you can indicate that a servlet can be called by two paths such as: urlPatterns = {"/submit", "/getResults"}
 
-6. The country flag's size and the emoji flag's size should be approximately as shown.
+ - In order to determine within the servlet which path was actually requested, you can use request.getServletPath();
 
-7. The flag emoji image URL *MUST* be obtained by parsing a ***JSON record*** returned from this site. This API returns an array of JSON records; convert it to an array of Java objects. Create a Java class with the appropriate String keys (see what the API returns to figure this out) as private data, an overloaded constructor, and getters/setters for each of the data fields. Only the "image" field (*not* the emoji field) will be used, but you'll need all the fields to do the conversion. Create a Java array from the JSON records containing *only* the needed countries (there are a lot more than that in the JSON record).
+Produce screen shots of your application:
+- With the answer options on desktop
+- With the getResults on desktop
+- With the answer options on mobile
+- With the getResults on mobile
 
-Only create this array ***once***, not again and again for every new country being searched. Points will be deducted if you do this incorrectly.
+## Use IntelliJ Project Name: Project1Task3
 
-You ***MUST*** use the gson library for this - see below for details about including it in your project.
+Task 3 is meant to give you practice with several things: servlet programming, web scraping, API's, JSON, and MVC.
 
-(*Note:* we could have scraped the flag emoji URL by treating the returned data as a string, but the point here is to use an API and JSON.)
+For this assignment, you may **optionally** use ChatGPT and/or Copilot to help you generate a solution; it's not a requirement and you should be able to do the design and coding without it.  Keep in mind that:
 
-8. When the user presses the "Continue" button, return to the original screen.
+    - generated code is not always correct
+    - the more precise your ChatGPT prompt, the better the solution is likely to be
+    - how you generate the solution should be repeatable and explainable
+    - you should be able to explain the generated solution
+    - you **must** document your use of AI tools. Show the prompt(s) you used to generate sections of code and what tools you used. Also note where you edited (if you did) any of the generated code and why you did so.
 
-9. You *MUST* use the MVC pattern for Task 2.
+## The Baseball App ##
+Create a web app using statistics from the American sport, baseball. You don't have to understand the game and its rules; just know that modern baseball management often uses player statistics to make in-game decisions.
+
+Basic offensive statistics include a player's batting average, number of runs batted in (RBI's), walk percentage, and strike out percentage. Basic defensive statistics include a player's fielding average, a pitcher's earned run average (ERA), and a pitcher's won-loss record. There are many other baseball statistics, fueled by data scientist baseball fans.
+
+Your app must meet these criteria:
+
+    - scrape baseball data from at least two web sites. Document what sites you used with an on-screen annotation.
+    - use baseball data from at least two web API's. Document these sites as above.
+    - use the gson library to handle JSON records - this is for the API's.
+    - include at least two baseball-related images. This can be specific baseball players, pictures of actual games or stadiums. Again, document the source in the output.
+    - be coded primarily in Java and JSP. If you use something else, give a brief but convincing argument why this was **necessary** and not just a convenience.
+    - present a web site that requires user interaction using a text field and at least two of these:
+        - button
+        - drop-down menu
+        - radio buttons
+    - use at least two web pages
+    - use the Model-View-Contorller (MVC) pattern and good separation of concerns
+    - be well documented - the code, the usage of the app, and the structure/design of the app, any AI-related things as described above.
+
+What baseball statistics you use, and where you get them, is up to you. The
+overall design of the web app is up to you (subject to the criteria above).
+
+You *MUST* use the MVC pattern for Task 3.
 
 ## Notes and hints
 
@@ -119,7 +159,7 @@ Your application should work similarly to InterestingPicture, but instead of sea
 
 - You are allowed to and encouraged to build your solution based on the InterestingPicture code you have been given in class. You MUST refactor it, however, so that it has project, variable, and class names that make sense for your application. For example, <b>you will lose points</b> if your class is still named InterestingPictureServlet.
 
-- You do not need to, but you are welcome to, use jsoup (https://jsoup.org/) which is a Java HTML Parser, to do the flag scraping.  It is the Java version of Beautiful Soup, which you may have used in Python. The downsides of using jsoup are you will first need to understand the Document Object Model (DOM) and CSS Selectors. These are both useful to know. The upside of using jsoup is that it makes it much easier to find and select content from HTML (i.e. screen scrape). Refer to the JSON Maven notes below; adding jsoup will require a similar process.
+- You do not need to, but you are welcome to, use jsoup (https://jsoup.org/) which is a Java HTML Parser, to do the scraping.  It is the Java version of Beautiful Soup, which you may have used in Python. The downsides of using jsoup are you will first need to understand the Document Object Model (DOM) and CSS Selectors. These are both useful to know. The upside of using jsoup is that it makes it much easier to find and select content from HTML (i.e. screen scrape). Refer to the JSON Maven notes below; adding jsoup will require a similar process.
 
 ## HTML
 
@@ -220,72 +260,9 @@ private void createTrustManager(String certType) throws KeyManagementException, 
 
 ```
 
-Track Piazza for additional hints and answers to questions.
-
-# Task 3 – Use the IntelliJ Project Name: Project1Task3
-
-Implement a web application that implements a simple desktop and mobile “clicker” for class.  Your app should allow users to submit answers to questions posed in class, and should provide a separate URL end point for getting the results of the submitted responses.  The welcome page for your app should be similar to Figure 5.  You can make it more stylish if you like, but it is not required.
-
-![Figure 5](figure5.png)
-***Figure 5***
-
-When the user makes a choice and hits “submit”, their answer should be stored in your MVC model.  The response should be similar to the picture on the left. Notice that it is **required** to provide feedback to the user regarding the choice that they made (i.e. “D” in this example).
-
-The user should also have the ability to submit another answer as shown in the screenshot.
-
-![Figure 6](figure6.png)
-***Figure 6***
-
-You can test the application by repeatedly submitting answers and allowing your model to tally the results.  Your web app should also have a URL path “/getResults” (shown in Figure 7) for listing the results of user voting.
-
-![Figure 7](figure7.png)
-***Figure 7***
-
-## Requirements for the /getResults path:
-
-1. List each answer that has been given, and the number of times a user has submitted that answer.
-2. You do not have to list options that have been chosen zero times.
-3. The results should be displayed sorted in alphabetical order.
-4. /getResults should also clear the stored results so that a new question can be posed.
-5. If there are no results available, then report this as shown in Figure 8.
-
-![Figure 8](figure8.png)
-***Figure 8***
-
-Note that requirement 4 does not adhere to the HTTP standard for a GET request. You should understand why this is bad behavior according to the standard, and how you could fix it (It might be on the exam).
-
-The web app should work with a mobile browser.  For this project you can use a simple check like the one that was used in InterestingPicture and then use an appropriate mobile doctype. An easy way to check your web app for mobile is to use the Google Chrome DevTools Using the Google Chrome browser.
-
-- Browse to your web application in Chrome
-- Access the Chrome DevTools
-(https://developers.google.com/web/tools/chrome-devtools/?hl=en#access-devtools).  
-- Toggle device mode to mobile and choose an Android or iPhone device
-(https://developers.google.com/web/tools/chrome-devtools/iterate/device-mode/?hl=en)
-- Reload the page.
-- In addition to testing, you use this to produce a screen shot showing your web app working for mobile.  If your page looks like the one on the right, even after reloading, then the doctype is not being set correctly.   
-
-Figure 9 is what the web app should look like for mobile if the doctype is set correctly.
-
-![Figure 9](figure9.png)
-***Figure 9***
-
-## Overall web app requirements:
-- You must use MVC to separate concerns.
-- Implement only one HttpServlet
-
-## Hints:
-- You can have multiple URL patterns in a WebServlet annotation.  For example, you can indicate that a servlet can be called by two paths such as: urlPatterns = {"/submit", "/getResults"}
-
- - In order to determine within the servlet which path was actually requested, you can use request.getServletPath();
-
-Produce screen shots of your application:
-- With the answer options on desktop
-- With the getResults on desktop
-- With the answer options on mobile
-- With the getResults on mobile
 
 ## Questions:
-If you have questions, you can post them to the class Piazza and tag them as “Project1”.
+If you have questions, you can post them to the class Piazza and tag them as “Project1”. Track Piazza for additional hints and answers to questions.
 
 # Summary & Submission:
 Be sure to review the Rubric linked on the course schedule for the first day.
@@ -296,19 +273,17 @@ Submit ***one*** PDF naned Project1_andrewID.zip, where "andrewID" is replaced w
 1. **Screen shots** of input, MD5 and SHA-256 output, both in hex and base 64
 2. **Code snippets** of computation of each hash
 
-### Task 2:
-1. **Screen shots** of input page, drop-down menu, output page for England and South Africa.
 
-2. **Code snippets** for:
-- scraping of the nickname
-- scraping of the capital
-- scraping of the top scorer with number of goals
-- scraping of the flag
-- api call for the flag emoji JSON record, including the conversion to a Java array of objects.
+### Task 2:
+1. **Screen shots** of the input page, output page (one vote), results page
+2. **Code snippets** from the Java code that screen scrape, query the API, and produce output.
 
 ### Task 3:
-1. **Screen shots** of the input page, output page (one vote), results page
-2. **Code snippets** from the Java code that produces the output page and the results page.
+1. **Screen shots** of input page(s) and output page(s).
+
+2. **Code snippets** for:
+- scraping
+- api call
 
 ### Code: ###
 Create three zip files, each one of which is the zip of your WHOLE project for task 1, 2 and 3. For each project, zip the whole project, you need to use "File->Export Project->To Zip" in IDEA.
