@@ -1,7 +1,7 @@
 # 95-702 Distributed Systems
 # Project 1
-## Assigned: Friday, January 27, 2023
-## Due: Friday, February 10, 2023, 11:59 PM
+## Assigned: Friday, September 8, 2023
+## Due: Friday, September 22, 2023, 11:59 PM
 ## Late by one minute is late!
 
 This project has five objectives:
