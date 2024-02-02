@@ -152,7 +152,7 @@ Your app **must** meet these criteria:
 
     2. Provide other information about the state. This must include two of the state's official things, like the state flower, the state flag, the state bird, and so on. Every state has some number of these things. Besides labeling the thing, it **must** include a picture of each thing.
 
-    You **must** web scrape this data. See Figure 6 for an example.
+    You **must** web scrape this data. See Figure 6 for an example. And you **cannot** use Flickr for the web scraping.
 
 ![Figure 6](figure6.png)
 
