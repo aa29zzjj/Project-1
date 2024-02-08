@@ -146,11 +146,11 @@ You app will first let the user choose a state by name using a drop down menu. N
 
 Your app **must** meet these criteria:
 
-    1. Show the state population using the U.S. Census Bureau's API at https://api.census.gov/data/2020. This API returns very simple JSON data. You'll have to check out their examples to see the query format. See the section below about using JSON.
+1. Show the state population using the U.S. Census Bureau's API at https://api.census.gov/data/2020. This API returns very simple JSON data. You'll have to check out their examples to see the query format. See the section below about using JSON.
 
     You **must** use the gson library to handle JSON records.
 
-    2. Provide other information about the state. This must include two of the state's official things, like the state flower, the state flag, the state bird, and so on. Every state has some number of these things. Besides labeling the thing, it **must** include a picture of each thing.
+2. Provide other information about the state. This must include two of the state's official things, like the state flower, the state flag, the state bird, and so on. Every state has some number of these things. Besides labeling the thing, it **must** include a picture of each thing.
 
     You **must** web scrape this data. See Figure 6 for an example. And you **cannot** use Flickr for the web scraping.
 
@@ -160,21 +160,21 @@ Your app **must** meet these criteria:
 
 ***Credit:Mad Tinman at https://en.wikipedia.org/***
 
-    3. Include at least two other facts about the state, obtained either by scraping or some API.
+3. Include at least two other facts about the state, obtained either by scraping or some API.
 
-    4. Add citations for each website you used (see Figure 6), including the Census Bureau.
+4. Add citations for each website you used (see Figure 6), including the Census Bureau.
 
-    5. Be able to handle different user input - in other words,
+5. Be able to handle different user input - in other words,
     do not show the same information in your output each time -
     it must be dynamic, not static. It must also be repeatable: if a
     user enters the same input data another time, the same output
     should be presented.
 
-    6. Be coded primarily in Java and JSP. If you use something else,
+6. Be coded primarily in Java and JSP. If you use something else,
     give a brief but convincing argument why this was **necessary** and
     not just a convenience (like you copied the code from github, or you got ChatGPT to generate it).
 
-    7. Present a web site that requires user interaction using a text
+7. Present a web site that requires user interaction using a text
     field **and** these:
         - button
         - drop-down menu
@@ -182,11 +182,11 @@ Your app **must** meet these criteria:
 
     And use one page for input and at least two web pages for your output.
 
-    8. Use the Model-View-Contorller (MVC) pattern and good separation of concerns
+8. Use the Model-View-Contorller (MVC) pattern and good separation of concerns
 
-    9. Handle error conditions in a "reasonable" way.
+9. Handle error conditions in a "reasonable" way.
 
-    10. Be well documented - the code, the usage of the app, and the
+10. Be well documented - the code, the usage of the app, and the
     structure/design of the app, any AI-related things as described above.
 
 What sites you use for state is up to you (except for the required Census Bureau data)- but be careful of copying other students' ideas; this **must** be your own work. The overall design of the web app is up to you (subject to the criteria above). If you have questions about sites, citations, or output, ***ASK***.
