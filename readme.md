@@ -189,15 +189,13 @@ Note that the longitude value is negative (west of Greenwich). See below for the
 
 ![Figure 10](figure10.png)
 
-***Current Conditions for Shenandoah***
+***Figure 9: Current Conditions for Shenandoah***
 
 See the section below about using JSON and setting up the correct Maven dependency. You **must** use the gson library to handle JSON records.
 
 Here are the park codes and the latitude/longitude values for the parks:
 
 ![Figure 9](figure9.png)
-
-***Figure 9: Codes and Lat/Long values***
 
 4. Use the National Park Service API to retrieve activities for the chosen park. You'll need to sign up for an API key (no fee required) and learn how to use the API. You *must* use a JSON library for this part; it is suggested that you use GSON - see the note below on adding GSON to your Maven project. The docs for the API are at:
 
@@ -209,7 +207,7 @@ Here's an example of the activities display:
 
 ![Figure 11](figure11.png)
 
-*** Activities for Shenandoah NP***
+***Figure 10: Activities for Shenandoah NP***
 
 Other requirements:
 5. Be coded primarily in Java and JSP. If you use something else,
